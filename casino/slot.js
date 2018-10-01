@@ -1,3 +1,6 @@
+var panos = 2;
+var rahat = 100;
+
 /* Pelaa-funktio arpoo kuvat */
 function pelaa(){
   // Arvotut kuvat talteen
@@ -15,8 +18,8 @@ function pelaa(){
 
 }
 
-function Panos(){
-
+var asetaPanos = function (){
+  
 }
 
 
