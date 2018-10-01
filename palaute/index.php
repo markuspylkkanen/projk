@@ -28,6 +28,14 @@ if (filter_has_var(INPUT_POST, 'submit')){
             fwrite($myfile, $rivi);
             fclose($myfile);
 
+            $to      = 'maksu.pylkkanen@gmail.com';
+            $subject = 'on';
+            $message = '5/5';
+            $headers = 'From: markus.pylkkanen@esedulainen.com' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+            mail($to, $subject, $message, $headers);
+
         }
     } else { 
         $msg = 'Täytä pakolliset kentät.';
@@ -90,13 +98,7 @@ if (filter_has_var(INPUT_POST, 'submit')){
 </html>
 <?php
 
-$to      = 'maksu.pylkkanen@gmail.com';
-$subject = 'on';
-$message = '5/5';
-$headers = 'From: markus.pylkkanen@esedulainen.com' . "\r\n" .
-'X-Mailer: PHP/' . phpversion();
 
-mail($to, $subject, $message, $headers);
 ?>
 
 
