@@ -1,6 +1,3 @@
-var panos = 2;
-var rahat = 100;
-
 /* Pelaa-funktio arpoo kuvat */
 function pelaa(){
   // Arvotut kuvat talteen
@@ -19,21 +16,36 @@ function pelaa(){
 }
 
 var asetaPanos = function (){
-  
+  panos++;
+  if (panos > 3) {
+    panos = 1;
+  }
+  update();
+}
+
+var update = function (){
+  document.getElementById('panos').innerHTML = panos;
+  document.getElementById('rahat').innerHTML = rahat;
 }
 
 
-  let age = 0;
-  
-  do {
-    age = prompt('Todista ikäsi.', 18 );
-    if ( age > 17 ) {
-      alert( 'Tervetuloa pelaamaan' );
-    } else {
-      alert( 'Sinun täytyy olla täysikäinen.' );
-    }
-  } while(age < 18);
+// Suoritetaan kun sivu ladataan
 
+var panos = 2;
+var rahat = 100;
+let age = 0;
+
+do {
+  age = prompt('Todista ikäsi.', 18 );
+  if ( age > 17 ) {
+    alert( 'Tervetuloa pelaamaan' );
+  } else {
+    alert( 'Sinun täytyy olla täysikäinen.' );
+  }
+} while(age < 18);
+
+
+update();
   
   
 
