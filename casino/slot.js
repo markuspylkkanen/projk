@@ -29,10 +29,10 @@ var update = function (){
 }
 
 
-// Suoritetaan kun sivu ladataan
+
 
 var panos = 2;
-var rahat = 100;
+var rahat = 50;
 let age = 0;
 
 do {
