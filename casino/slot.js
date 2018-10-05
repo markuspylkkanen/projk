@@ -9,7 +9,8 @@ function pelaa(){
     // arvotaan luku 1-6
     let luku = Math.floor(Math.random() * 6) +1;
     kuvat[i].src = 'he' + luku +'.png';
-    
+    rahat = rahat - panos
+    update();
     
   }
 
