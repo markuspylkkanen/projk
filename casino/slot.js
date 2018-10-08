@@ -31,7 +31,12 @@ function tarkistaVoitot(luvut){
   
   let seiskoja = str.split("5").length-1;
   let sitruuna = str.split("2").length-1;
+  let kirsikka = str.split("3").length-1;
   
+  if (kirsikka > 2) {
+    rahat = rahat + panos * 4;
+  }
+
   if (sitruuna >= 2) {
     rahat = rahat + panos * 3;
   }
