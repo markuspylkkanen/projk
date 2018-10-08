@@ -30,10 +30,14 @@ function tarkistaVoitot(luvut){
   var str = luvut.toString();
   
   let seiskoja = str.split("5").length-1;
+  let sitruuna = str.split("2").length-1;
+  
+  if (sitruuna >= 2) {
+    rahat = rahat + panos * 3;
+  }
 
-
-  if (seiskoja >= 2) {
-    rahat = rahat + panos * 4;
+  if (seiskoja > 2) {
+    rahat = rahat + panos * 10;
   }
 }
 
