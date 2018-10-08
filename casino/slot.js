@@ -1,20 +1,45 @@
 /* Pelaa-funktio arpoo kuvat */
 function pelaa(){
+  rahat = rahat - panos
   // Arvotut kuvat talteen
   
 
   // vaihdetaan kuva-elementtien src-atribuutti
   let kuvat = document.getElementsByTagName('img');
+  let luvut = [];
   for (let i=0; i<kuvat.length; i++) {
     // arvotaan luku 1-6
     let luku = Math.floor(Math.random() * 6) +1;
-    kuvat[i].src = 'he' + luku +'.png';
-    rahat = rahat - panos
-    update();
-    
+    luvut.push(luku);
+    kuvat[i].src = 'he' + luku +'.png';  
   }
 
+  tarkistaVoitot(luvut);
+
+  
+ 
+  update();
+
+  
+
 }
+
+function tarkistaVoitot(luvut){
+  // Testataan tuliko voittoja
+  console.log(luvut);
+  var str = luvut.toString();
+  
+  let seiskoja = str.split("5").length-1;
+
+
+  if (seiskoja >= 2) {
+    rahat = rahat + panos * 4;
+  }
+}
+
+
+
+  
 
 var asetaPanos = function (){
   panos++;
