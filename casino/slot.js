@@ -35,7 +35,7 @@ function tarkistaVoitot(luvut){
   let luumu = str.split("1").length-1;
   
   if (luumu >= 2) {
-    rahat = rahat + panos * 3;
+    rahat = rahat + panos * 2;
   }
 
   if (kirsikka > 2) {
