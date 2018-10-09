@@ -33,7 +33,12 @@ function tarkistaVoitot(luvut){
   let sitruuna = str.split("2").length-1;
   let kirsikka = str.split("3").length-1;
   let luumu = str.split("1").length-1;
+  let appelsiini = str.split("6").length-1;
   
+  if (appelsiini >= 2) {
+    rahat = rahat + panos * 2;
+  }
+
   if (luumu >= 2) {
     rahat = rahat + panos * 2;
   }
