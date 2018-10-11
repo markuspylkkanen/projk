@@ -49,7 +49,7 @@ function tarkistaVoitot(luvut){
   }
 
   if (kirsikka > 2) {
-    rahat = rahat + panos * 4;
+    rahat = rahat + panos * 3;
   }
 
   if (sitruuna >= 2) {
