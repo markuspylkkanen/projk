@@ -36,11 +36,11 @@ function tarkistaVoitot(luvut){
   let appelsiini = str.split("6").length-1;
   let on = str.split("4").length-1;
   
-  if (on >= 2) {
+  if (on > 2) {
     rahat = rahat + panos * 2;
   }
 
-  if (appelsiini >= 2) {
+  if (appelsiini > 2) {
     rahat = rahat + panos * 2;
   }
 
@@ -52,7 +52,7 @@ function tarkistaVoitot(luvut){
     rahat = rahat + panos * 3;
   }
 
-  if (sitruuna >= 2) {
+  if (sitruuna > 2) {
     rahat = rahat + panos * 3;
   }
 
