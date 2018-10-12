@@ -45,7 +45,7 @@ function tarkistaVoitot(luvut){
   }
 
   if (luumu >= 2) {
-    rahat = rahat + panos * 1;
+    rahat = rahat + panos * 2;
   }
 
   if (kirsikka > 2) {
