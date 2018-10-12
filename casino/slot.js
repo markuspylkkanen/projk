@@ -37,23 +37,23 @@ function tarkistaVoitot(luvut){
   let on = str.split("4").length-1;
   
   if (on > 2) {
-    rahat = rahat + panos * 2;
+    rahat = rahat + panos * 1;
   }
 
   if (appelsiini > 2) {
-    rahat = rahat + panos * 2;
+    rahat = rahat + panos * 1;
   }
 
   if (luumu >= 2) {
-    rahat = rahat + panos * 2;
+    rahat = rahat + panos * 1;
   }
 
   if (kirsikka > 2) {
-    rahat = rahat + panos * 3;
+    rahat = rahat + panos * 1;
   }
 
   if (sitruuna > 2) {
-    rahat = rahat + panos * 3;
+    rahat = rahat + panos * 1;
   }
 
   if (seiskoja > 2) {
