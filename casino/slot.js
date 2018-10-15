@@ -53,7 +53,7 @@ function tarkistaVoitot(luvut){
   }
 
   if (sitruuna > 2) {
-    rahat = rahat + panos * 1;
+    rahat = rahat + panos * 2;
   }
 
   if (seiskoja > 2) {
