@@ -22,6 +22,7 @@
 <h2>Panos: <span id="panos"></span> €</h2>
 <input type="button" class="button2" value="Pelaa" onclick="pelaa();"> 
 <input type="button" class="button" value="Panos" onclick="asetaPanos();">
+<button class="button" onclick ="myFunction()">Ota rahet</button>
 <br>
 <h3>Voitot:</h3> 
 <h3> 3 seiska symbolia antaa 5x voiton</h3>
@@ -31,7 +32,12 @@
 <h3> 3 appelsiini symbolia antaa 1x voiton</h3>
 <h3>3 marja symbolia antaa 1x voiton</h3>
 
-
+<dialog id="lomake">
+    <form action="post">
+        <label for="nimi">Nimi</label><input type="text" name="nimi">
+        <input type="submit" value="Tallenna">
+    </form>
+</dialog>
 
 <script src="slot.js"></script>
 </body>
