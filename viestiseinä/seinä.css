@@ -1,32 +1,10 @@
-h3 {
-    font-family: 'Mukta', sans-serif;
-}
-.button1 {
-        padding: 8px 8px;
-        margin-left: 10px;
-        font-size: 16px;
-        text-align: center;
-        cursor: pointer;
-        outline: none;
-        color: #fff;
-        background-color: black;
-        border: none;
-        border-radius: 20px;
-        box-shadow: 0 9px #999;;
-        }
-        .button1:active {
-        background-color: blue;
-        box-shadow: 0 5px #666;
-        transform: translateY(4px);
-        
-}
+
+
 div.a {
     text-align: center;
 }
 h1 {
     font-family: 'Patua One', cursive;    
 }
-h3 {
-    color: blue
-}
+
    
