@@ -30,7 +30,7 @@ if (filter_has_var(INPUT_POST, 'submit')){
     </nav>
     <div class="container">
       
-        <form action="http://localhost/projk/n%C3%A4yt%C3%A4viestit/n%C3%A4yt%C3%A4viestit.html" method="post">
+        <form action="insert.php" method="post">
             <div class="form-group">
                 <label>Nimi:</label>
                 <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
