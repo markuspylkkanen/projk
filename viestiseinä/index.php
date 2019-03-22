@@ -30,7 +30,7 @@ if (filter_has_var(INPUT_POST, 'submit')){
     </nav>
     <div class="container">
       
-        <form action="insert.php" method="post">
+        <form action="insert.php" method="POST">
             <div class="form-group">
                 <label>Nimi:</label>
                 <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
