@@ -1,7 +1,7 @@
 <?php
 $name = "";
 $message = "";
-
+echo date("l jS \of F Y h:i:s A") . "<br>";
 
 
 if (filter_has_var(INPUT_POST, 'submit')){
@@ -49,6 +49,7 @@ if (filter_has_var(INPUT_POST, 'submit')){
             <button type="submit" name="submit" class="btn btn-primary">Lähetä</button>
             </form>
          </div>
+         
     </div>
     </body>
 </html>
