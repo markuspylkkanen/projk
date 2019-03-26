@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+
+<style>
+    .palaute-lista  li {
+        margin: 20px 0;
+    }
+</style>
+</head>
+<body onload="getEnnätys()">
+    <ul id="show" class="palaute-lista"></ul>
+</body>
+
+<script type="text/javascript">
+
+function getEnnätys() {
+
+    var xmlhttp, xmlDoc;
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            showData(this.responseXML);
+        }
+    };
+    xmlhttp.open("POST", "ennätys.xml", true);
+    xmlhttp.send();
+}
+
+function showData(data) {
+
+    var i;
+    var li="";
+    var rivit = data.getElementsByTagName('rivi');
+    for (i = 0; i <rivit.length; i++) {
+        li += "<li>" +
+        "Nimi: " + rivit[i].getElementsByTagName("nimi")[0].childNodes[0].nodeValue + "<br>" +
+        "Rahat: " + rivit[i].getElementsByTagName("rahat")[0].childNodes[0].nodeValue + "<br>" +
+        "Päivämäärä: " + rivit[i].getElementsByTagName("date")[0].childNodes[0].nodeValue + "<br>" +
+    
+        "</li>";
+    }
+    document.getElementById("show").innerHTML = li;
+}
+</script>
+</html>
