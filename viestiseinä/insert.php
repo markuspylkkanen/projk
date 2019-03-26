@@ -1,4 +1,5 @@
 <?php
+echo date("l jS \of F Y h:i:s A") . "<br>";
 $servername = "localhost";
 $username = "root";
 $password = "password";
