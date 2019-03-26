@@ -1,11 +1,8 @@
 <?php
-$name = "";
-$message = "";
 echo date("l jS \of F Y h:i:s A") . "<br>";
 
 
-if (filter_has_var(INPUT_POST, 'submit')){
-}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,12 +30,12 @@ if (filter_has_var(INPUT_POST, 'submit')){
         <form action="insert.php" method="POST">
             <div class="form-group">
                 <label>Nimi:</label>
-                <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
+                <input type="text" name="name" class="form-control">
             </div>
     
             <div class="form-group">
                 <label>Kirjoita palautetta:</label>
-                <textarea name="message" class="form-control" ><?php echo $message;?></textarea> 
+                <textarea name="message" class="form-control" ></textarea> 
                 <br>
               
             </div>
