@@ -35,7 +35,7 @@ echo date("l jS \of F Y h:i:s A") . "<br>";
     <br>
             <div class="form-group">
                 <label></label>
-                <textarea name="message" class="form-control" placeholder="Kirjoita palautetta:"></textarea> 
+                <textarea rows="10" cols="50" name="message" class="form-control" placeholder="Kirjoita palautetta:"></textarea> 
                 <br>
               
             </div>
