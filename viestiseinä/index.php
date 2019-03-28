@@ -29,13 +29,13 @@ echo date("l jS \of F Y h:i:s A") . "<br>";
       
         <form action="insert.php" method="POST">
             <div class="form-group">
-                <label>Nimi:</label>
-                <input type="text" name="name" class="form-control">
+                <label></label>
+                <input type="text" name="name" class="form-control" placeholder="Nimi:">
             </div>
-    
+    <br>
             <div class="form-group">
-                <label>Kirjoita palautetta:</label>
-                <textarea name="message" class="form-control" ></textarea> 
+                <label></label>
+                <textarea name="message" class="form-control" placeholder="Kirjoita palautetta:"></textarea> 
                 <br>
               
             </div>
