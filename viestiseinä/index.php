@@ -1,7 +1,4 @@
 <?php
-echo date("l jS \of F Y h:i:s A") . "<br>";
-
-
 
 ?>
 <!DOCTYPE html>
@@ -21,6 +18,8 @@ echo date("l jS \of F Y h:i:s A") . "<br>";
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header"> 
+            <span id="clock"> </span>
+            <br>
                 <a class="navbar-brand" href="index.php">Viestiseinä</a>
             </div>
         </div>
@@ -45,9 +44,29 @@ echo date("l jS \of F Y h:i:s A") . "<br>";
             
             <button type="submit" name="submit" class="btn btn-primary">Lähetä</button>
             </form>
+
          </div>
          
     </div>
+    <script>
+(function(){
+    updateClock();
+    setInterval('updateClock()', 1000);
+
+})();
+
+function updateClock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    if (hours < 10) { hours = "0" + hours;}
+    if (minutes < 10) {minutes = "0" + minutes;}
+    if (seconds < 10) {seconds = "0" + seconds;}
+    var elem = document.getElementById('clock');
+    elem.innerHTML = hours + ':' + minutes + ':' + seconds;
+}
+</script> 
     </body>
 </html>
 <?php
