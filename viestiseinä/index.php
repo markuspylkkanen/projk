@@ -4,6 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+span {
+font-size: 2.0em;
+}
+</style>
 
     <title>Viestiseinä</title>
     <meta charset="utf-8">
