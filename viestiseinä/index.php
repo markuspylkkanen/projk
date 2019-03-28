@@ -6,7 +6,8 @@
 <head>
 <style>
 span {
-font-size: 2.0em;
+font-size: 2em;
+font-family: 'Germania One', cursive;
 }
 </style>
 
