@@ -28,7 +28,7 @@ if ($conn->connect_error) {
 } 
 
 $sql = "INSERT INTO viestit (id, viesti, pvm, nimi)
-VALUES ('on', 'on', 'john@example.com')";
+VALUES ('value1', 'value2', 'value3')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Table created successfully";
