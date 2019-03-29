@@ -1,6 +1,6 @@
 <?php
 
-echo date("l jS \of F Y h:i:s A") . "<br>";
+
 
 // Kirjoitetaan data tekstitiedostoon
 if (filter_has_var(INPUT_POST, 'submit')){
@@ -27,11 +27,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
+$sql = "INSERT INTO viestit (id, viesti, pvm, nimi)
+VALUES ('on', 'on', 'john@example.com')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Table created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
