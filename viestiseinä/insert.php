@@ -1,7 +1,4 @@
 <?php
-
-
-
 // Kirjoitetaan data tekstitiedostoon
 if (filter_has_var(INPUT_POST, 'submit')){
     $name = $_POST['name'];
@@ -11,30 +8,31 @@ if (filter_has_var(INPUT_POST, 'submit')){
     $rivi = "$name;$message\n";
     fwrite($myfile, $rivi);
     fclose($myfile);
+
+    // Tallennetaan tiedot kantaan
+    $servername = "localhost";
+    $username = "root";
+    $password = "qwerty";
+    $dbname = "seina";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+    $sql = "INSERT INTO viestit (viesti, pvm, nimi)
+    VALUES ('$name', 'value2', '$message')";
+
+    if ($conn->query($sql) === TRUE) 
+    {
+        header('Location: http://localhost/projk/n%C3%A4yt%C3%A4viestit/n%C3%A4yt%C3%A4viestit.html');
+    }
+    else 
+    {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+
 }
-
-// Tallennetaan tiedot kantaan
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "";
-
-
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-$sql = "INSERT INTO viestit (id, viesti, pvm, nimi)
-VALUES ('value1', 'value2', 'value3')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Table created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
 ?>
