@@ -26,7 +26,7 @@ if (filter_has_var(INPUT_POST, 'submit')){
 
     if ($conn->query($sql) === TRUE) 
     {
-        header('Location: http://localhost/projk/n%C3%A4yt%C3%A4viestit/n%C3%A4yt%C3%A4viestit.html');
+        header('Location: http://localhost/projk2/n%C3%A4yt%C3%A4viestit/n%C3%A4yt%C3%A4viestit.html');
     }
     else 
     {
