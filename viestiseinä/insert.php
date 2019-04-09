@@ -3,6 +3,7 @@
 if (filter_has_var(INPUT_POST, 'submit')){
     $name = $_POST['name'];
     $message = $_POST['message'];
+    $date = date("Y-m-d");
     
     $myfile = fopen("tiedot.txt", "a") or die("");
     $rivi = "$name;$message\n";
@@ -21,7 +22,7 @@ if (filter_has_var(INPUT_POST, 'submit')){
         die("Connection failed: " . $conn->connect_error);
     } 
     $sql = "INSERT INTO viestit (viesti, pvm, nimi)
-    VALUES ('$name', 'value2', '$message')";
+    VALUES ('$name', '$date', '$message')";
 
     if ($conn->query($sql) === TRUE) 
     {
