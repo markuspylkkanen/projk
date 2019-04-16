@@ -40,8 +40,10 @@ $result = $conn->query($sql);
 
 
             <p><?php echo $row["viesti"]?></p>
+            <p><?php echo $row["nimi"]?></p>
+            <p><?php echo $row["pvm"]?></p>
 
-            
+
         <?php endwhile; ?>
 
 
