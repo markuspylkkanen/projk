@@ -10,23 +10,14 @@ if (filter_has_var(INPUT_POST, 'submit')){
     fwrite($myfile, $rivi);
     fclose($myfile);
 
-    // Tallennetaan tiedot kantaan
-    $servername = "localhost";
-    $username = "root";
-    $password = "qwerty";
-    $dbname = "seina";
+    include "db.php";
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    } 
     $sql = "INSERT INTO viestit (viesti, pvm, nimi)
     VALUES ('$name', '$date', '$message')";
 
     if ($conn->query($sql) === TRUE) 
     {
-        header('Location: http://localhost/projk2/n%C3%A4yt%C3%A4viestit/n%C3%A4yt%C3%A4viestit.html');
+        header('Location: http://localhost/projk2/viestisein%C3%A4/n%C3%A4yt%C3%A4viestit.php');
     }
     else 
     {
