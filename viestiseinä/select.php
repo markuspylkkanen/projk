@@ -1,17 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "qwerty";
-$dbname = "seina";
+include "db.php";
 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-$sql = "SELECT viestit, viesti, pvm, nimi FROM seina";
+$sql = "SELECT viesti, pvm, nimi FROM viestit";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
