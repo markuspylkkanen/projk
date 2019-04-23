@@ -33,35 +33,30 @@ $result = $conn->query($sql);
         </div>
     </div>
 
-    
+    <div class="row">
 
-    <?php if ($result->num_rows > 0): ?>
-        <?php  while($row = $result->fetch_assoc()): ?>
+            <?php if ($result->num_rows > 0): ?>
+                
+                <?php  while($row = $result->fetch_assoc()): ?>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $row["nimi"]?></h5>
+                                <p class="card-text">
+                                    <?php echo $row["viesti"]?>
+                                </p>
+                                <p><?php echo $row["pvm"]?></p>
+                                            
+                            </div>       
+                        </div>
+                    </div>
 
-
-            <p><?php echo $row["viesti"]?></p>
-            <p><?php echo $row["nimi"]?></p>
-            <p><?php echo $row["pvm"]?></p>
-
-
-        <?php endwhile; ?>
-
-
-
-        <div class="row">
-            <div class="col-sm">
-                <div class="card" style="width: 20rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text"></p>
-                                    
-                    </div>       
-                </div>
-            </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        
         </div>
-
-    <?php endif; ?>
-    
+    </div> 
 </div>
+
 </body>
 </html>
