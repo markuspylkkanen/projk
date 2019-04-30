@@ -12,7 +12,7 @@ if (filter_has_var(INPUT_POST, 'submit')){
     }
     if (strlen($message) <= 0)
     {
-        $error = "Viestiä ei ole jätetty"; 
+        $error = "Palautetta ei ole jätetty"; 
         header("Location: index.php?error=".$error);
         die();  
     }
