@@ -10,6 +10,12 @@ if (filter_has_var(INPUT_POST, 'submit')){
         header("Location: index.php?error=".$error);
         die();  
     }
+    if (strlen($message) <= 0)
+    {
+        $error = "Viestiä ei ole jätetty"; 
+        header("Location: index.php?error=".$error);
+        die();  
+    }
     
     
     $myfile = fopen("tiedot.txt", "a") or die("");
