@@ -28,7 +28,14 @@ font-family: 'Germania One', cursive;
         </div>
     </nav>
     <div class="container">
-      
+        
+        <?php if (isset($_GET['error'])): ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $_GET['error']; ?>
+            </div>
+        <?php endif; ?>
+
+
         <form action="insert.php" method="POST">
             <div class="form-group">
                 <label></label>
