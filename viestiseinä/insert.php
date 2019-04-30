@@ -4,6 +4,13 @@ if (filter_has_var(INPUT_POST, 'submit')){
     $name = $_POST['name'];
     $message = $_POST['message'];
     $date = date("Y-m-d");
+    if (strlen($name) <= 0)
+    {
+        $error = "Nimeä ei ole syötetty"; 
+        header("Location: index.php?error=".$error);
+        die();  
+    }
+    
     
     $myfile = fopen("tiedot.txt", "a") or die("");
     $rivi = "$name;$message\n";
