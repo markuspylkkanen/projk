@@ -58,6 +58,7 @@ font-family: 'Germania One', cursive;
          </div>
          
     </div>
+    <button onclick="window.location.href = 'http://localhost/projk2/yll%C3%A4piton%C3%A4kym%C3%A4/yll%C3%A4piton%C3%A4kym%C3%A4.html';">admin</button>
     <script>
 (function(){
     updateClock();
