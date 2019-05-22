@@ -16,6 +16,12 @@
 <i><h1>Ylläpitonäkymä</h1></i>
 </head>
 <body>
+<br>
+<button onclick="">Piilota</button>
+<button onclick="">Poista</button>
+<button onclick="">Näytä</button>
+
+
 </div>    
 </body>
 </html>
