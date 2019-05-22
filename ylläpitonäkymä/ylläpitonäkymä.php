@@ -16,12 +16,15 @@
     .viesti {
         margin-top: 15px;
     }
+    h2 {
+    text-align: center;
+    }
     </style>
 
 
 </head>
 <body>
-<h1>Ylläpitonäkymä</h1>
+<i><h2>Ylläpitonäkymä</h2></i>
 
 <div class="container">
     <div class="row">
