@@ -1,6 +1,12 @@
 <?php
+
+
+
 // Kirjoitetaan data tekstitiedostoon
 if (filter_has_var(INPUT_POST, 'submit')){
+    
+    var_dump($_POST['name']);
+    
     $name = $_POST['name'];
     $message = $_POST['message'];
     $date = date("Y-m-d");
@@ -18,7 +24,7 @@ if (filter_has_var(INPUT_POST, 'submit')){
     }
     
     
-    $myfile = fopen("tiedot.txt", "a") or die("");
+    $myfile = fopen("tiedot.txt", "a") or die("Tallennus ei onnistu");
     $rivi = "$name;$message\n";
     fwrite($myfile, $rivi);
     fclose($myfile);
@@ -30,7 +36,7 @@ if (filter_has_var(INPUT_POST, 'submit')){
 
     if ($conn->query($sql) === TRUE) 
     {
-        header('Location: http://localhost/projk2/viestisein%C3%A4/n%C3%A4yt%C3%A4viestit.php');
+        header('Location: naytaviestit.php');
     }
     else 
     {
